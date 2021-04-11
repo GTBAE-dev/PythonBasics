@@ -17,3 +17,18 @@ print(text_function.index("C")) # 변수.index(A) : 문자열 내 A의 위치(A=
 print(text_function.find("ABC")) # 변수.find(A) : 문자열 내 A의 위치(A=문자열; 제일 첫 문자의 위치)
 print(text_function.find("H")) # 변수.find(A) : A가 문자열에 없으면 -1출력(함수 index는 오류 발생)
 print(text_function.count("BC")) #변수.count(A) : 문자열 내 A의 갯수
+
+''' 3-3. 문자열 포맷 '''
+# %d & %c & %s
+print("data %d" %4) # %d 에 숫자/정수만 입력
+print("character %c" %"4") # %c 에 문자 입력
+print("string %s" %"ABC") # %s 에 문자열, 숫자 모두 입력
+print("string %s and %s" %("ABC",4)) # 여러개 입력 방법
+# {} & format
+print("format {}".format(4)) # {}에 문자열, 숫자 모두 입력
+print("format {} and {}".format("ABC","CDE")) # 순서대로 {} 내에 출력
+print("format {1} and {0}".format("ABC","CDE")) # {} 내 번호로 숫자순서로 출력
+# f 이용 변수 출력
+format1 = "ABC"
+format2 = "CDE"
+print(f"format1 {format1} and format2 {format2}") # f와 {} 내 변수명을 통한 출력
