@@ -32,3 +32,13 @@ print("format {1} and {0}".format("ABC","CDE")) # {} 내 번호로 숫자순서�
 format1 = "ABC"
 format2 = "CDE"
 print(f"format1 {format1} and format2 {format2}") # f와 {} 내 변수명을 통한 출력
+
+''' 3-4. 탈출문자 '''
+# 따옴표 & \ 출력
+print("\"ABC\", \'CDE\'") # \를 이용한 따옴표 출력(\" & \')
+print("C:\\Users\\qorbx\\Desktop\\PythonWorkspace") # \를 이용한 \ 출력(\\)
+# 커서 이동
+print("ABC \n CDE") # \n 을 통한 줄바꿈, 그냥 줄바꾸면 에러 발생
+print("ABC \t CDE") # \t 를 통한 tab(4칸) 띄어쓰기
+print("ABC \b CDE") # \b 를 통한 backspace(한칸) 삭제
+print("ABC \r CDE") # \r 을 통한 커서 맨앞 이동, 자리만큼 덮어쓰기(insert)
