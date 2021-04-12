@@ -24,3 +24,18 @@ list_text.sort()
 print(list_text) # mix list는 sort, reverse 사용 X
 list_number.reverse()
 print(list_number) # 리스트.reverse() : 리스트 내 객체 순서 뒤집기
+
+''' 4-2. 튜플 '''
+# 튜플: 리스트와 달리 내용 수정이 불가함. 
+tuple_mix = ("AA", 10, "BB", 20, 10)
+print(tuple_mix[0]) # 튜플[a] : 튜플 내 a번째 객체 출력(리스트도 동일하게 가능)
+# tuple_mix.add("CC") : 오류 발생, append, insert, pop, extend 모두 불가(수정 X)
+tuple_number = (20, 30, 40, 10)
+# tuple_number.reverse() : 오류 발생, sort, reverse, clear 모두 불가
+print(tuple_number.index(10)) 
+print(tuple_mix.count(10)) # 튜플 수정과 관련없는 기능은 사용 가능
+tuple_alpha = (A, B, C) = ("AA", "BB", "CC") # 튜플 활용시 여러 변수 한번에 정의 가능
+print(A, B, C)
+A = "DD"
+print(A, B, C) # 튜플로 정의한 변수 수정 가능
+print(tuple_alpha) # 해당 튜플은 수정 적용 X
