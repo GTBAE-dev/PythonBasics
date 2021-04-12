@@ -59,3 +59,24 @@ print(set_number.difference(set_mix))
 set_number.add(50) # 세트.add(A) : 세트에 A 추가
 set_number.remove(20) # 세트.remove(A) : 세트 내 A 제거
 print(set_number) # 순서 보장X, 위치(index, []) 출력 불가()
+
+''' 4-4. 사전 '''
+# 사전(dictionary) : key & value 로 구성된 객체의 조합, 중괄호로 표시
+dictionary_1 = {1:"AA", 2:"BB", "str":"str"} # key와 value에 int / str 모두 가능
+print(dictionary_1.get(1)) # 사전.get(a) : key a 의 value 가져오기
+print(dictionary_1.get(4, "DD")) # value가 없는 key를 가져올때 A 없으면 none 출력 후 프로그램 종료.
+print(1 in dictionary_1)
+print(4 in dictionary_1) # key in dictionary : key 에 value 존재 여부(O : True / X : False)
+# 사전 내용 수정
+dictionary_1[3] = "CC" # 정의 안된 key 사용하여 추가
+dictionary_1["str"] = "text" # 정의 된 key 사용하여 덮어쓰기
+del dictionary_1[1] # del [key] : 정의 된 key 의 value 삭제
+print(dictionary_1)
+dictionary_1.clear() # 사전.clear() : 사전 비우기
+print(dictionary_1)
+# 사전 내용 출력
+dictionary_2 = {"a":"AA", "b":"BB", "c":"CC"}
+print(dictionary_2.keys()) # 사전.keys() : 사전 내 keys 출력
+print(dictionary_2.values()) # 사전.values() : 사전 내 values 출력
+print(dictionary_2.items()) # 사전.items() : 사전 내 key 와 value 모두 출력
+
