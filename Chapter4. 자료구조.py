@@ -39,3 +39,23 @@ print(A, B, C)
 A = "DD"
 print(A, B, C) # 튜플로 정의한 변수 수정 가능
 print(tuple_alpha) # 해당 튜플은 수정 적용 X
+
+''' 4-3. 세트 '''
+# 세트 : 중복이 안되고 순서가 없는 집합, 중괄호로 표시
+set_number = {10, 10, 20, 20, 30}
+print(set_number) # 중복된 값 없이 저장 및 출력
+set_mix = set(["AA", "BB", "CC", 10, 20])
+print(set_mix) # set(A) : 세트를 정의할 수 있는 다른 방법
+# 교집합 : A 와 B의 교집합
+print(set_number & set_mix)
+print(set_number.intersection(set_mix))
+# 합집합 : A 와 B의 합집합
+print(set_number | set_mix)
+print(set_number.union(set_mix)) # 순서 보장 X
+# 차집합 : A 에서 B의 차집합
+print(set_number - set_mix)
+print(set_number.difference(set_mix))
+# 집합 내용 수정
+set_number.add(50) # 세트.add(A) : 세트에 A 추가
+set_number.remove(20) # 세트.remove(A) : 세트 내 A 제거
+print(set_number) # 순서 보장X, 위치(index, []) 출력 불가()
