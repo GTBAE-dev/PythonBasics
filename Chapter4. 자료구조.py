@@ -80,3 +80,14 @@ print(dictionary_2.keys()) # 사전.keys() : 사전 내 keys 출력
 print(dictionary_2.values()) # 사전.values() : 사전 내 values 출력
 print(dictionary_2.items()) # 사전.items() : 사전 내 key 와 value 모두 출력
 
+''' 4-5. 자료구조 변경 '''
+# 자료구조에 따른 괄호 변경
+print(list_number)
+print(type(list_number))
+list_number = tuple(list_number)
+print(list_number)
+print(type(list_number))
+list_number = set(list_number)
+print(list_number)
+print(type(list_number))
+# list_number = dict(list_number) : dictionary 는 key/value 형태라 변경 불가
