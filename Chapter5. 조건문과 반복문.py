@@ -36,3 +36,12 @@ for i in range(1, 12) :
         print("BREAK")
         break # 이 후 실행문 실행 않고 for문 탈출
     print("{0}\t".format(i), end = "")
+
+''' 5-4. while 문 '''
+# while 문 : 다른 반복문, True 일 시 계속 반복
+a = 5
+while a >= 1 : # while True : 무한 반복(무한루프, ctrl + c 로 탈출)
+    print ("a = {0}\t".format(a), end = "")
+    a -= 1
+    if a == 0:
+        print("") # continue & break 모두 사용 가능
