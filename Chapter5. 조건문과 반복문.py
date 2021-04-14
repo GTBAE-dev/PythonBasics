@@ -24,3 +24,15 @@ print("")
 I = [len(str(i**10)) for i in I] # A for a in B : B의 객체 a를 A로 변환, 한줄 for 문
 print(I) # len(str) : str 타입 문자열 길이
 
+''' 5-3. Continue & Break '''
+a = [1, 3, 5, 7, 9]
+b = [i+1 for i in a]
+for i in range(1, 12) :
+    if i in a :
+        continue # continue 이전의 실행문은 실행, 이 후 실행문은 미실행, 이 후 다음 i 로 이동
+    elif i in b :
+        print("b = ", end = "")
+    elif i not in a or b : 
+        print("BREAK")
+        break # 이 후 실행문 실행 않고 for문 탈출
+    print("{0}\t".format(i), end = "")
