@@ -36,3 +36,21 @@ def function_variable(*c) : # *을 붙여 가변인자로 설정
 function_variable(10, 20, 30, 40, 50) # 전달값 변수 내 여러 객체 저장
 print("")
 
+''' 6-5. 지역변수 & 전역변수 '''
+# 지역변수 : 함수 내에서만 쓸 수 있는 변수
+# 전역변수 : 프로그램 내 어디서든 호출되는 변수
+parameter = 100 # 전역변수
+def function_last_1(num) : 
+    parameter = 10 # 지역변수 : 동일한 변수명 사용시 함수 내에서는 지역변수 사용
+    return parameter - num
+print("Result of function_last_1 is {0}".format(function_last_1(5)))
+print(parameter) # 함수 외부에서는 전역변수 호출
+def function_last_2(num) : 
+    global parameter # 전역변수를 함수로 호출하는 방법 1
+    return parameter - num
+print("Result of function_last_2 is {0}".format(function_last_2(30)))
+def function_last_3(parameter, num) : # 전역변수를 함수로 호출하는 방법 2
+    return parameter - num
+print("Result of function_last_3 is {0}".format(function_last_3(parameter, 10)))
+print("Result of function_last_3 is {0}".format(function_last_3(20, 10))) # 전달값 설정 시, 전역변수 무시
+# 전역변수를 많이 설정하는 것은 프로그램이 복잡해져 권장하지 않음
