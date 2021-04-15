@@ -26,3 +26,13 @@ function_basic() # 전달값 설정 X : 기본값 출력 방법
 function_basic(a = "CC", b = "DD", num = 100) # 변수명과 함께 전달값 지정
 function_basic(num = 100, a = "CC", b = "DD") # 순서가 바뀌어도 변수명에 따라 지정됨
 
+''' 6-4. 가변인자 '''
+# 가변인자 : 함수의 전달값을 여러개 설정하는 방법
+def function_variable(*c) : # *을 붙여 가변인자로 설정
+    C = 1
+    for i in c : # 가변인자는 튜플형태로 저장
+        print("c_{0} is {1}    ".format(i, C), end = "")
+        C += 1    
+function_variable(10, 20, 30, 40, 50) # 전달값 변수 내 여러 객체 저장
+print("")
+
