@@ -47,3 +47,18 @@ class alpha_4(alpha_2) :
         print(self.upfirst * num_def, "\t", self.all_up * num_def)
 EE = alpha_4("Ee", "ee", 5)
 EE.multiple(5) # 같은 함수명, 자식 클래스는 자식 함수 적용
+
+''' 8-5. isinstance '''
+# isinstance : 현재 객체가 어떤 클래스인지 확인하는 것. 
+list = []
+list.append(AA)
+list.append(BB)
+list.append(CC)
+list.append(DD)
+for i in list : 
+    if isinstance(i, alpha_1) : # isinstance(i, A) : 리스트 내 i 가 A 클래스이면 실행
+        print("{0} is alpha_1".format(i))
+    elif isinstance(i, alpha_2) : 
+        print("{0} is alpha_2".format(i))
+    elif isinstance(i, alpha_3) : 
+        print("{0} is alpha_3".format(i))
