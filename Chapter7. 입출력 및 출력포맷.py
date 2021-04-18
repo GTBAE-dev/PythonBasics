@@ -60,3 +60,13 @@ lines = file_chap7.readlines() # readlines : list형태로 파일 내 모든 줄
 for i in lines :  # 끝을 모르는 파일 끝까지 읽기
     print(i, end = "")
 file_chap7.close()
+
+''' 7-4. 피클 입출력 '''
+# Pickle : 프로그램상 사용하고 있는 데이터 저장 파일 형태, pickle 파일은 피클로만 입출력 가능
+import pickle
+pickle_chap7 = open("pickle_chap7.pickle", "wb") # wb(write binary) : 피클파일 쓰기(덮어쓰기)
+pickle.dump(dictionary, pickle_chap7) # dump(a, A) : 데이터a를 파일A에 입력
+pickle_chap7.close()
+pickle_chap7 = open("pickle_chap7.pickle", "rb") # rb(read binary) : 피클파일 읽기
+print(pickle.load(pickle_chap7))
+pickle_chap7.close()
