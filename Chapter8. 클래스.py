@@ -26,3 +26,14 @@ class alpha_2 :
 CC = alpha_2("Cc", 3)
 CC.multiple(4) # 변수.함수() : 클래스 내 함수 사용 방법
 CC.multiple(0)
+
+''' 8-3. 상속 '''
+# 상속 : 기존 클래스(부모)를 상속하여 다른 클래스(자식) 생성
+class alpha_3(alpha_1, alpha_2) : # 하나 이상의 클래스를 상속 가능
+    def __init__(self, upfirst, lowfirst, num_1, num_2, all_low) : 
+        alpha_1.__init__(self, lowfirst, num_1) # 부모 클래스의 멤버변수 초기화
+        alpha_2.__init__(self, upfirst, num_2)
+        self.all_low = all_low
+DD = alpha_3("Dd", "dD", 3, 4, "dd") # 부모 클래스의 init 함수 사용됨
+DD.multiple(3) # 부모의 함수 사용 가능
+
