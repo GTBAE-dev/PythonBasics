@@ -32,8 +32,18 @@ CC.multiple(0)
 class alpha_3(alpha_1, alpha_2) : # 하나 이상의 클래스를 상속 가능
     def __init__(self, upfirst, lowfirst, num_1, num_2, all_low) : 
         alpha_1.__init__(self, lowfirst, num_1) # 부모 클래스의 멤버변수 초기화
-        alpha_2.__init__(self, upfirst, num_2)
+        alpha_2.__init__(self, upfirst, num_2) # 부모 클래스의 멤버변수를 취사선택하여 상속 불가
         self.all_low = all_low
 DD = alpha_3("Dd", "dD", 3, 4, "dd") # 부모 클래스의 init 함수 사용됨
 DD.multiple(3) # 부모의 함수 사용 가능
 
+''' 8-4. 연산자 오버로딩 '''
+# 연산자 오버로딩 : 부모 클래스에서 정의된 함수를 자식 클래스에서 재정의하여 사용
+class alpha_4(alpha_2) : 
+    def __init__(self, upfirst, all_up, num_2) : 
+        super().__init__(upfirst, num_2) # super을 이용한 멤버변수 초기화 방법(self 없어도 됨, 다중상속에는 사용X)
+        self.all_up = all_up
+    def multiple(self, num_def) : 
+        print(self.upfirst * num_def, "\t", self.all_up * num_def)
+EE = alpha_4("Ee", "ee", 5)
+EE.multiple(5) # 같은 함수명, 자식 클래스는 자식 함수 적용
