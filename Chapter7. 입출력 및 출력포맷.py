@@ -70,3 +70,14 @@ pickle_chap7.close()
 pickle_chap7 = open("pickle_chap7.pickle", "rb") # rb(read binary) : 피클파일 읽기
 print(pickle.load(pickle_chap7))
 pickle_chap7.close()
+
+''' 7-5. with '''
+# with :  열고 닫을 필요 없이 편하게 파일(피클, 텍스트) 입출력
+with open("pickle_chap7.pickle", "wb") as pickle_chap77 : # with open(파일명, 기능) as 변수 : 변수에 해당 기능의 파일을 넣는다는 의미
+    pickle.dump(["AA", "BB", "CC"], pickle_chap77) # close 필요 없이 실행 후 with 문 탈출
+with open("pickle_chap7.pickle", "rb") as pickle_chap77 : 
+    print(pickle.load(pickle_chap77))
+with open("file_chap7.txt", "a", encoding = "utf8") as file : 
+    file.write("EEEEE\n") # "w" 도 가능
+with open("file_chap7.txt", "r", encoding = "utf8") as file : 
+    print(file.read())
