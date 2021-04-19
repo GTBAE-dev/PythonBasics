@@ -26,3 +26,14 @@ short3 = module_def_chap10
 # 모듈 직접 실행 : if __name__ == "__main__" : 직접실행 명령문 / else : 호출 명령문
 short3.remain(3,4) 
 short3.power(4,2)
+
+''' 10-3. 패키지 설치 방법 '''
+# 많은 패키지가 만들어져 있고, 갖다 쓸 수 있음(google > pypi)
+# beautiful soup(for web scrapping)
+# 터미널에 pip list : 설치된 pip list
+# 터미널에 pip show beaultifulsoup4 : 설치된 beautifulsoup4 에 대한 정보
+# 터미널에 pip install --upgrade beautifulsoup4 : 설치된 beautifulsoup4 업그레이드
+# 터미널에 pip uninstall beautifulsoup4 : 설치된 beautifulsoup4 삭제
+from bs4 import BeautifulSoup
+soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
+print(soup.prettify())
