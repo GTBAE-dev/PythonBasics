@@ -37,3 +37,18 @@ short3.power(4,2)
 from bs4 import BeautifulSoup
 soup = BeautifulSoup("<p>Some<b>bad<i>HTML")
 print(soup.prettify())
+
+''' 10-4. 내장함수 '''
+# 내장함수 : 이미 설치되어 있어 import 안하고 사용할 수 있는 함수
+# input : 사용자 입력을 받는 함수, str 형태로 값을 받음
+# dir : 어떤 객체를 넘겨줬을 때, 그 객체에 어떤 함수를 사용할 수 있는지
+import random
+print(dir(random))
+import pickle
+print(dir(pickle))
+print(dir())
+lst = [1, 2, 3]
+print(dir(lst))
+sub = "AA"
+print(dir(sub))
+
