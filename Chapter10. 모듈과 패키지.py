@@ -52,3 +52,33 @@ print(dir(lst))
 sub = "AA"
 print(dir(sub))
 
+''' 10-5. 외장함수 '''
+# 외장함수 : import를 하여 사용할 수 있는 함수(google > list of python modules)
+# inspect : 모듈의 위치를 확인할 수 있는 모듈
+import inspect
+print(inspect.getfile(random))
+print(inspect.getfile(module_chap10))
+# glob : 경로 내의 폴더/파일 목록 조회
+import glob
+print(glob.glob("*.py")) # 확장자 py 인 모든 파일 찾기
+# os : 운영체제에서 제공하는 기본 기능들(ex. 폴더를 만들고 삭제)
+import os
+print(os.getcwd()) # 현재 데렉토리를 표시해달라
+folder = "folder"
+if os.path.exists(folder): # 해당 이름의 폴더가 있는지
+    print("existing folder")
+    os.rmdir(folder) # 폴더 삭제
+    print(folder, "folder deleted")
+else:
+    os.makedirs(folder) #해당 이름 폴더 생성
+    print(folder, "folder made")
+print(os.listdir()) # glob 과 유사한 함수
+# time : 시간과 관련된 함수
+import time
+print(time.localtime()) # 현재 날짜, 시각
+print(time.strftime("%Y-%m-%d %H:%M:%S")) # 현재 날짜, 시각
+import datetime
+today = datetime.date.today() # 현재 날짜
+print(today)
+td = datetime.timedelta(days=100) # 날짜 100일 차이
+print(today + td)
